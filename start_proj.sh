@@ -5,5 +5,11 @@ pip install django==1.10.6
 django-admin.py startproject tango_with_django_project
 cd tango_with_django_project
 python manage.py startapp rango
-#python manage.py  runserver
 git reset --hard origin/master
+python manage.py migrate
+python createUs.py
+python manage.py makemigrations rango
+python manage.py sqlmigrate rango 0001
+python manage.py migrate
+
+python manage.py runserver

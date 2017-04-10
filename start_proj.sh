@@ -11,5 +11,4 @@ python createUs.py
 python manage.py makemigrations rango
 python manage.py sqlmigrate rango 0001
 python manage.py migrate
-
 python manage.py runserver

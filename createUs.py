@@ -1,6 +1,5 @@
-from django.core.management import setup_environ
-import settings, json
-setup_environ(settings)
+import json, os, sys, django
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "tango_with_django_project.settings")
 
 from django.contrib.auth.models import User
 

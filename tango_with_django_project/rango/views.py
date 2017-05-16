@@ -15,9 +15,13 @@ def show_category(request, category_name_slug):
 	return render(request, 'rango/category.html', context_dict)
 
 def index(request):
-	#context_dict = {'boldmessage' : 'What is going on'}
+	message = {'boldmessage' : 'What is going on'}
+	page_list = Page.objects.order_by('-views')[:5]
+	page_dict = {'pages': page_list}
 	category_list = Category.objects.order_by('-likes')[:5]
 	context_dict = {'categories' : category_list}
+	context_dict.update(message)
+	context_dict.update(page_dict)
 	return render(request, 'rango/index.html', context=context_dict)
 
 def about(request):

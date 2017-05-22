@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from rango.models import Category,Page
 from django.http import HttpResponse
+from rango.models import Category,Page
+from rango.forms import CategoryForm
 
 def show_category(request, category_name_slug):
 	context_dict = {}
@@ -26,3 +27,15 @@ def index(request):
 
 def about(request):
 	return HttpResponse('Rango says here is the about hello <a href="/rango/">Index</a>')
+
+def add_category(request):
+	form = CategoryForm()
+
+	if request.method == 'POST':
+		form = CategoryForm(request.POST)
+		if form.is_valid():
+			form.save(commit=true)
+			return index(request)
+		else:
+			print(form.errors)
+	return render(request, 'rango/add_category.html', {'form': form})

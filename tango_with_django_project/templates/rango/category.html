@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block title_block %}
-	{{ categor.name }}
+	{{ category.name }}
 {% endblock %}
 
 {% block body_block %}
@@ -17,6 +17,7 @@
 		{% else %}
 			<strong>No pages currently in category.</strong>
 		{% endif %}
+		<a href="{% url 'add_page' category.slug %}">Add a Page</a>
 	{% else %}
 		The specified category does not exist!
 	{% endif %}

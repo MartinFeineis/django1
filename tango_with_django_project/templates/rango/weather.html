@@ -1,10 +1,29 @@
-{% extends 'rango/base.html' %}
-{% load staticfiles %}
-
-{% block title_block %}
-	Weather
-{% endblock %}
-
-{% block body_block %}
-	</p> Show Time and weather here</p>
-{% endblock %}
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript">
+    <!--
+    function updateTime() {
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+        if (minutes < 10){
+            minutes = "0" + minutes;
+        }
+        if (seconds < 10){
+            seconds = "0" + seconds;
+        }
+        var v = hours + ":" + minutes + ":" + seconds;
+        setTimeout("updateTime()",1000);
+        document.getElementById('time').innerHTML=v;
+    }
+    updateTime();
+    //-->
+</script>
+</head>
+<body>
+    <p class="clock"><span id="time" /></p>
+    <a href="http://rbb-mp3-fritz-m.akacast.akamaistream.net/7/799/292093/v1/gnl.akacast.akamaistream.net/rbb_mp3_fritz_m" > Fritz </a>
+</body>
+</html>

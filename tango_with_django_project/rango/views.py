@@ -62,4 +62,4 @@ def add_page(request, category_name_slug):
 	return render(request, 'rango/add_page.html', context_dict)
 
 def weather(request):
-	return render(request, 'rango/weather')
+	return render(request, 'rango/weather.html')

@@ -1,0 +1,21 @@
+@font-face {
+	font-family: digital;
+	src: url('digital-7.ttf');
+}
+
+html {
+	background: black;
+}
+
+.clock {
+  	color : red;
+  	font-size: 27vw;
+  	font-family: digital;
+ 	width: 98%;
+ 	height: auto;   
+	left: 0;                  /* set left and right to the same value! */
+  	right: 0;
+	margin-left: auto;                             
+ 	margin-right: auto;
+ 	background: rgb(8, 8, 8);         /* mark this element visually prominent */
+}

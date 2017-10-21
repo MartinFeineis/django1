@@ -63,3 +63,6 @@ def add_page(request, category_name_slug):
 
 def weather(request):
 	return render(request, 'rango/weather.html')
+
+def nga(request):
+	return render(request, 'rango/nga.html')

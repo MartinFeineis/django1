@@ -1,8 +1,9 @@
 # My ignores
 bin/
+lib/
 include/
-local_settings.py
-db.sqlite3
+local/
+pip-selfcheck.json
 
 # Flask stuff:
 instance/

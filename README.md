@@ -16,3 +16,7 @@ aktiviere die virtuelle python Umgebung
 ```
 source venv/bin/activate
 ```
+Installiere Abhaengigkeite
+```
+pip install -r requirements.txt
+```

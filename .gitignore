@@ -1,4 +1,7 @@
 # My ignores
+cont.id
+image.id
+app.zip
 bin/
 lib/
 include/

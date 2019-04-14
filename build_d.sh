@@ -6,7 +6,7 @@ cp /home/wolle/nasghoul/data/django_secrets/* .
 echo -e " ${BYellow} Copied secrets ${Color_Off}"
 rm app.zip
 echo -e " ${BYellow} deleted app.zip and building now ${Color_Off}"
-zip -r app.zip webapp/* nginx.conf uwsgi.ini requirements.txt entrypoint.sh supervisord.conf
+zip -r app.zip messenger/* uwsgi.ini requirements.txt entrypoint.sh
 echo -e " ${BYellow} zipped everything up ${Color_Off}"
 sudo docker build --iidfile=image.id .
 cat image.id

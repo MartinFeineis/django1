@@ -9,5 +9,5 @@ RUN unzip app.zip
 
 RUN chmod +x entrypoint.sh
 RUN ./entrypoint.sh
-EXPOSE 80
-CMD ["uwsgi --socket :8000 --wsgi-file messenger/wsgi.py"]
+EXPOSE 8000
+CMD ["/usr/bin/uwsgi", "--ini", "/var/www/uwsgi.ini"]

@@ -5,5 +5,5 @@ apk add --no-cache python3 zip python3-dev gcc make postgresql-dev musl-dev libx
 pip3 install --upgrade pip
 pip3 install cython
 pip3 install --no-build-isolation --no-cache-dir -r requirements.txt
-cd /var/www/messenger
+#cd /var/www/messenger
 #uwsgi --socket :8000 --wsgi-file messenger/wsgi.py

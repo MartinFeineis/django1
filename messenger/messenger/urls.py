@@ -18,7 +18,7 @@ from django.urls import include, path
 
 #Rest Framework
 from rest_framework import routers
-from messenger.apiapp import views
+from apiapp import views
 
 urlpatterns = [
     path('', include(router.urls)),

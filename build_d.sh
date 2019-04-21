@@ -2,6 +2,10 @@
 BYellow='\033[1;33m'
 Color_Off='\033[0m'
 
+if [ $1 == "-f" ]
+then
+  sudo docker build --no-cache --iidfile=image.id .
+fi
 sudo docker build --iidfile=image.id .
 cat image.id
 echo -e " ${BYellow}  build Dockerfile and cating imagid ${Color_Off}"

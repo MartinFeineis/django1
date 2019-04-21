@@ -8,8 +8,8 @@ def index(request):
 # stuff for Rest Framework
 
 from django.contrib.auth.models import User, Group
-from rest_framework import viewset
-from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
+from rest_framework import viewsets
+from apiapp.serializers import UserSerializer, GroupSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     """

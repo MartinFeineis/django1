@@ -2,11 +2,11 @@
 BYellow='\033[1;33m'
 Color_Off='\033[0m'
 
-if [ "$1" == "-f" ]
-then
-  sudo docker build --no-cache --iidfile=image.id .
-elif [ "$1" == "-s"]
-then
+if [ "$1" == "-f" ]; then
+  echo -e " ${BYellow} Building new Image ${Color_Off}"
+  sudo docker build -t djangorest --no-cache --iidfile=image.id . #Force build new image
+elif [ "$1" == "-s" ]; then
+  echo -e " ${BYellow} Stopping Docker Containers ${Color_Off}"
   sudo docker stop $(sudo docker ps -q) #stop all running docker containers
 fi
 sudo docker build -t djangorest --iidfile=image.id .

@@ -37,9 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apiapp',
     'rest_framework',
-    'messenger',
 ]
 
 REST_FRAMEWORK = {

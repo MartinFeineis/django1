@@ -16,7 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+#Rest Framework
+from rest_framework import routers
+from messenger.apiapp import views
+
 urlpatterns = [
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('apiapp/', include('apiapp.urls')),
     path('admin/', admin.site.urls),
 ]

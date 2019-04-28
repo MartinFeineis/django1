@@ -22,4 +22,6 @@ cat image.id
 echo -e " ${BYellow}  build Dockerfile and cating imagid ${Color_Off}"
 rm -f cont.id
 echo -e " ${BYellow}  deleting cont.id File and running container ${Color_Off}"
-sudo docker run --name $containerName -v $(pwd):/var/www/ -w /var/www/ -t $(cat image.id)  uwsgi --ini uwsgi.ini
+sudo docker run -d --name $containerName -v $(pwd):/var/www/ -w /var/www/ -t $(cat image.id)  uwsgi --ini uwsgi.ini
+# Run Migrations
+#sudo docker exec ConDjango python3 messenger/manage.py migrate" >> build_d.sh

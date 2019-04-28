@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - "8000:8000"
+    networks:
+     - django-network
+  postgres:
+    image: postgres
+    networks:
+     - django-network
+
+networks:
+  django-network:
+    driver: bridge

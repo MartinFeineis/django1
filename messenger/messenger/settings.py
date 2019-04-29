@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'messenger.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME':'postgres' # get_env_variable('DATABASE_NAME'),
-        'USER': 'postgres' #get_env_variable('DATABASE_USER'),
-        'PASSWORD': 'password1234' #get_env_variable('DATABASE_PASSWORD'),
+        'NAME': os.environ.get('DATABASE_NAME', ''),
+        'USER': os.environ.get('DATABASE_USER', ''),
+        'PASSWORD': os.environ.get('DATABASE_PASSWORD', ''),
         'HOST': 'postgres',
         'PORT': '5432',
     }

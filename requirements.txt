@@ -4,3 +4,4 @@ uwsgi
 djangorestframework
 markdown
 django-filter
+psycopg2

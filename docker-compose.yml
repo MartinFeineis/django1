@@ -2,6 +2,8 @@ version: '2'
 
 services:
   django:
+    env_file:
+     - develop.env
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,6 +12,8 @@ services:
     networks:
      - django-network
   postgres:
+    env_file:
+     - develop.env
     image: postgres
     networks:
      - django-network

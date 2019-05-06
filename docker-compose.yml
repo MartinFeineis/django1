@@ -1,4 +1,4 @@
-version: '2'
+version: '3.7'
 
 services:
   django:
@@ -11,6 +11,14 @@ services:
      - "8000:8000"
     networks:
      - django-network
+    command: ["/usr/bin/uwsgi", "--ini", "/var/www/uwsgi.ini"]
+    volumes:
+      - type: volume
+        source: mydata
+        target: /var/www
+        volume:
+          nocopy: true
+
   postgres:
     env_file:
      - develop.env
@@ -18,6 +26,15 @@ services:
     networks:
      - django-network
 
+  ubuntu:
+    env_file:
+      - ubuntu.env
+    image: ubuntu:latest
+    command: /bin/bash
+
 networks:
   django-network:
     driver: bridge
+
+volumes:
+  mydata: /home/wolle/projects/django1

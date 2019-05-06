@@ -13,11 +13,7 @@ services:
      - django-network
     command: ["/usr/bin/uwsgi", "--ini", "/var/www/uwsgi.ini"]
     volumes:
-      - type: volume
-        source: mydata
-        target: /var/www
-        volume:
-          nocopy: true
+      - "/home/wolle/projects/django1:/var/www"
 
   postgres:
     env_file:
@@ -35,6 +31,3 @@ services:
 networks:
   django-network:
     driver: bridge
-
-volumes:
-  mydata: /home/wolle/projects/django1

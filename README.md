@@ -20,3 +20,5 @@ Installiere Abhaengigkeite
 ```
 pip install -r requirements.txt
 ```
+ 6539  sudo docker exec django1_django_1 python3 /var/www/messenger/manage.py migrate
+ 6540  history | tail -n 20

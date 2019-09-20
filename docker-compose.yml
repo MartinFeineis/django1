@@ -8,7 +8,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-     - "8000:8000"
+     - "8080:8080"
     networks:
      - django-network
     command: ["/usr/bin/uwsgi", "--ini", "/var/www/uwsgi.ini"]
@@ -21,12 +21,7 @@ services:
     image: postgres
     networks:
      - django-network
-
-  ubuntu:
-    env_file:
-      - ubuntu.env
-    image: ubuntu:latest
-    command: /bin/bash
+  nginx:
 
 networks:
   django-network:

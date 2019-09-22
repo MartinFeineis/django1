@@ -7,6 +7,10 @@ pip install --user virtualenv
 Clone das Projekt
 ```
 git clone git@github.com:MartinFeineis/django1.git
+pyenv local 3.5.2
+pip install -r requirements.txt
+cd messenger
+python manage.py runserver
 ```
 Erstelle eine virtuelle python umgebung
 ```

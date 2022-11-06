@@ -1,4 +1,4 @@
-version: '3.7'
+version: "2"
 
 services:
   django:
@@ -21,12 +21,10 @@ services:
     image: postgres
     networks:
      - django-network
-
-  ubuntu:
-    env_file:
-      - ubuntu.env
-    image: ubuntu:latest
-    command: /bin/bash
+    ports:
+    - "5432:5432"
+    volumes:
+    - db-data:/var/lib/postgresql/data
 
 networks:
   django-network:

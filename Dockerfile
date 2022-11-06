@@ -7,7 +7,5 @@ RUN chmod +x entrypoint.sh
 RUN ./entrypoint.sh
 EXPOSE 8000
 
-
-
 #FROM alpine:latest
 #CMD ["/usr/bin/uwsgi", "--ini", "/var/www/uwsgi.ini"]

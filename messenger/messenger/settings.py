@@ -25,7 +25,7 @@ SECRET_KEY = 'stupidKeyHere'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.17.0.2']
+ALLOWED_HOSTS = ['172.17.0.2','localhost']
 
 
 # Application definition
@@ -79,17 +79,27 @@ WSGI_APPLICATION = 'messenger.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': 'django', #os.environ.get('DATABASE_NAME', ''),
+#        'USER': 'postgres', #os.environ.get('DATABASE_USER', ''),
+#        'PASSWORD': 'securePassword', #os.environ.get('DATABASE_PASSWORD', ''),
+#        'HOST': '172.19.0.2',
+#        'PORT': '5432',
+#    }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'django', #os.environ.get('DATABASE_NAME', ''),
         'USER': 'postgres', #os.environ.get('DATABASE_USER', ''),
         'PASSWORD': 'securePassword', #os.environ.get('DATABASE_PASSWORD', ''),
-        'HOST': 'postgres',
+        'HOST': '172.19.0.2',
         'PORT': '5432',
     }
 }
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 

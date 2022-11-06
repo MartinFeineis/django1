@@ -77,6 +77,12 @@ WSGI_APPLICATION = 'messenger.wsgi.application'
 
 
 # Database
+DATABASES = {
+            'default': {
+                        'ENGINE': 'django.db.backends.sqlite3',
+                                'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+                                    }
+            }
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 #DATABASES = {
@@ -89,17 +95,6 @@ WSGI_APPLICATION = 'messenger.wsgi.application'
 #        'PORT': '5432',
 #    }
 #}
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django', #os.environ.get('DATABASE_NAME', ''),
-        'USER': 'postgres', #os.environ.get('DATABASE_USER', ''),
-        'PASSWORD': 'securePassword', #os.environ.get('DATABASE_PASSWORD', ''),
-        'HOST': '172.19.0.2',
-        'PORT': '5432',
-    }
-}
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
